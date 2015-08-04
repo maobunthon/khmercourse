@@ -1,0 +1,8 @@
+-
+  name: 'Post index'
+  uriPattern:    'login'
+  defaults:
+    '@package':    'WE.Khmercourse'
+    '@controller': 'Login'
+    '@action':     'index'
+    '@format':     'html'

@@ -1,0 +1,13 @@
+/Build/
+/Configuration/
+/Data/
+!/Configuration/Routes.yaml
+/Packages/*
+/Packages/Application/WE.Week3/Configuration/Settings.yaml
+!/Packages/Application
+/Web/
+/bin/
+/Readme.txt
+/Upgrading.txt
+/flow
+/flow.bat
