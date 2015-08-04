@@ -1,9 +1,10 @@
-<f:layout name="Default" />
+<f:layout name="Administrator" />
 
-<f:section name="Title">A list of logins</f:section>
+<f:section name="Title"></f:section>
 
 <f:section name="Content">
-    <h1>Flow - Login</h1>
+<div class="container col-sm-6 col-sm-offset-3">
+    <h1>Welcome to Khmercourse</h1>
 
     <f:flashMessages />
 
@@ -12,13 +13,15 @@
             <f:link.action action="logout" controller="Login">Logout</f:link.action>
         </f:then>
         <f:else>
-            <f:form action="authenticate" method="post" name="loginform">
-                <label>User:</label><f:form.textfield name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" /><br />
-                <label>Pass:</label><f:form.password name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" /><br />
-                <f:form.submit value="Login" />
+            <f:form action="authenticate" method="post" name="loginform" class="form-horizontal">
+                <label>Username:</label><f:form.textfield  class="form-control" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" /><br />
+                <label>Password:</label><f:form.password class="form-control" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" /><br />
+                <f:form.submit value="Login"  class="btn btn-primary"/>
             </f:form>
             <br />
             Not yet an account? <f:link.action action="register" controller="Login">Register here!!</f:link.action>
         </f:else>
     </f:security.ifHasRole>
+</div>
+
 </f:section>
